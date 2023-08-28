@@ -1,10 +1,10 @@
 package com.example.starwarsship.ui.main
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.starwarsship.data.model.response.ListShip
 import com.example.starwarsship.databinding.AdapterShipBinding
@@ -15,6 +15,7 @@ class ShipAdapter(diffUtil: DiffUtil.ItemCallback<ListShip>) :
 
     inner class ViewHolder(private val binding: AdapterShipBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("SetTextI18n")
         fun binding(data: ListShip) {
             binding.apply {
                 mtvName.text = "${data.name} (${data.model})"
