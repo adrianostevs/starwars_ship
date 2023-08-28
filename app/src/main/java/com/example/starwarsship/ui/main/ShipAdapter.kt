@@ -17,8 +17,7 @@ class ShipAdapter(diffUtil: DiffUtil.ItemCallback<ListShip>) :
         RecyclerView.ViewHolder(binding.root) {
         fun binding(data: ListShip) {
             binding.apply {
-                mtvName.text = data.name
-                mtvModel.text = data.model
+                mtvName.text = "${data.name} (${data.model})"
                 mtvManufacturer.text = data.manufacturer
                 mtvCapacity.text = data.cargoCapacity
                 mtvCost.text = try {
